@@ -1,19 +1,17 @@
 rime-docker-image
 ==================
 
-A Docker image that has the [`rime`](https://github.com/jimkang/rime) module installed, with all the necessary databases built.
+A Docker image that has the [rime](https://github.com/jimkang/rime) module installed, with all the necessary databases built.
 
 Installation
 ------------
 
-    npm install rime-docker-image
+    docker pull jkang/prebuilt-rime
 
 Usage
 -----
 
-    var someFactory = require('rime-docker-image');
-    var thing = someFactory();
-    thing.use();
+You can start your app's Dockerfile with `FROM jkang/prebuilt-rime` to get an image built from NodeSource's [`nodesource/trusty:4.1.1`](https://github.com/nodesource/docker-node) image (Ubunty Trusty, Node 4.1.1) with [psy](https://github.com/substack/psy) and rime install over it.
 
 Tests
 -----
